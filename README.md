@@ -13,7 +13,7 @@ This tool is free and open to anyone who wants to review my code - hopefully you
 
 <h2>Things This Will Do</h2>
 <ul>
-<li>Confirm a security flaw in MS Office is blocked from remote exploit.<li>
+<li>Confirm a security flaw in MS Office is blocked from remote exploit.</li>
 <ul><li>Removes the MSDT registry vulnerability</li></ul>
 <li>Update itself and validate against the hash value for the tool.</li>
 <li>Run Windows and Microsoft update, install, and automatically reboot if necessary.</li>
