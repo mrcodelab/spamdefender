@@ -42,7 +42,7 @@ This toolset is written in PowerShell and tested on Windows 10. I do not have th
 <br>
 <h2>1st Time Setup</h2>
 <ol>
-<li>Create a folder in 'C:\Program Files\' called zAdmin<li>
+<li>Create a folder in 'C:\Program Files\' called zAdmin</li>
 <li>Run powershell.exe as administrator</li>
 <li>Set-ExecutionPolicy Bypass</li>
 <li>Save spamdefender.ps1 to the new zAdmin folder</li>
