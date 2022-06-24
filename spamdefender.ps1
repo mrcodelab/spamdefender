@@ -56,7 +56,7 @@ function gitUpdater{
         Write-Host "Updating the maintenance and security files" -ForegroundColor Yellow
         Invoke-WebRequest -Uri https://raw.githubusercontent.com/mrcodelab/spamdefender/main/spamdefender.ps1 -OutFile '$HOME\Downloads'
         $zip1 = Get-FileHash -Algorithm SHA256 $HOME\Downloads\spamdefender.ps1 | Select-Object -ExpandProperty Hash
-        Invoke-WebRequest -Uri https://raw.githubusercontent.com/mrcodelab/spamdefender/main/sd-hash.txt -OutFile '$HOME\Downloads'
+        Invoke-WebRequest -Uri https://raw.githubusercontent.com/mrcodelab/hashes/main/sd-hash.txt -OutFile '$HOME\Downloads'
         $hash1 = Get-Content $HOME\Downloads\sd-hash.txt
         if ( $zip1 -eq $hash1 ) {
             Move-Item spamdefender.ps1 $b
@@ -71,7 +71,7 @@ function gitUpdater{
     try {
         Invoke-WebRequest -Uri https://raw.githubusercontent.com/mrcodelab/spamdefender/main/hosts -OutFile '$HOME\Downloads'
         $zip2 = Get-FileHash -Algorithm SHA256 $HOME\Downloads\hosts | Select-Object -ExpandProperty Hash
-        Invoke-WebRequest -Uri https://raw.githubusercontent.com/mrcodelab/spamdefender/main/sdh-hash.txt -OutFile '$HOME\Downloads'
+        Invoke-WebRequest -Uri https://raw.githubusercontent.com/mrcodelab/hashes/main/sdh-hash.txt -OutFile '$HOME\Downloads'
         $hash2 = Get-Content $HOME\Downloads\hosts_hash.txt
         if ( $zip2 -eq $hash2 ) {
             $ucheck = Get-FileHash -Algorithm SHA256 $h | Select-Object -ExpandProperty Hash
