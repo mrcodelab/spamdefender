@@ -11,8 +11,12 @@ $task = Read-Host "Do you need a reboot (r) OR shutdown(s) OR keep awake(k)"
 $task = $task.ToUpper()
 
 try {
-    # TODO: test to see if 'C:\Program Files\zAdmin' exists, if not, create the folder
-    # if !($b){ mkdir $b} else{pass}
+    if ( Test-Path -Path $b ) {
+        Write-Host "The folder already exists."
+    }
+    else{
+        mkdir $b
+    }
 }
 catch {
     {1:<#Do this if a terminating exception happens#>}
@@ -61,7 +65,7 @@ function gitUpdater{
         else { Write-Host "The Spam Defender hash did not match! The code was not updated." -ForegroundColor Red }
     }
     catch {
-        -ErrorAction SilentlyContinue
+        Write-Host "There was an issue updating the Spam Defender file." -ErrorAction SilentlyContinue
     }
 
     try {
@@ -81,8 +85,7 @@ function gitUpdater{
         else { Write-Host "The host hash did not match! The host file was not updated." -ForegroundColor Red }
     }
     catch {
-        Write-Host "Security file update blocked by antivirus. No biggie." -ForegroundColor White
-        -ErrorAction SilentlyContinue
+        Write-Host "Security file update blocked by antivirus. No biggie." -ForegroundColor White -ErrorAction SilentlyContinue
     }
 
 }
