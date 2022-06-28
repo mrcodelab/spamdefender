@@ -1,6 +1,6 @@
-﻿# version yyyy.mm.MAJ.MIN.r
-# version 2022.06.1.0.0
-$version = "202206.1.0.0"
+﻿# version MAJ.MIN.r.yyyymm
+# version 1.0.1.202206
+$version = "1.0.1.202206"
 $u=$env:UserName
 $c=$env:COMPUTERNAME
 Write-Output "Hi $u. "
