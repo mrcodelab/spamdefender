@@ -20,6 +20,8 @@
 #	127.0.0.1       localhost
 #	::1             localhost
 
+127.0.0.1 *.tiktok.com
+127.0.0.1 https://www.tiktok.com
 127.0.0.1 www.xxxfiles.com
 127.0.0.1 https://www.adultfriendfinder.com
 127.0.0.1 bigfuck.tv
